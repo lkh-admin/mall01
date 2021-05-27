@@ -10,6 +10,7 @@ public class UserController {
     public String userC(){
         //userService.userS();
         System.out.println("hall");
+        System.out.println("1");
         return "hallWord";
     }
 }
