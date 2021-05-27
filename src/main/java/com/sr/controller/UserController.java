@@ -9,6 +9,7 @@ public class UserController {
     @RequestMapping("user")
     public String userC(){
         //userService.userS();
+        System.out.println("hall");
         return "hallWord";
     }
 }
