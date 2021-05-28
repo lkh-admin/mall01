@@ -8,6 +8,9 @@ class Mall01ApplicationTests {
 
     @Test
     void contextLoads() {
+
+
+
     }
 
 }
