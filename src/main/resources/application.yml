@@ -1,6 +1,6 @@
-#spring:
-#  datasource:
-#    username: root
-#    password: lvkaihe
-#    url: 116.62.153.32:3306
-#    driver-class-name: com.mysql.jdbc.Driver
+spring:
+  datasource:
+    username: root
+    password: lvkaihe
+    url: jdbc:mysql://116.62.153.32:3306/mall
+    driver-class-name: com.mysql.jdbc.Driver
