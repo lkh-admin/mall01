@@ -15,10 +15,10 @@ public class UserController {
     @RequestMapping("user")
     public List<Map> userC(){
         List<Map> maps = userService.userS();
-        System.out.println("hall");
-        System.out.println("1");
-        System.out.println("222");
-        System.out.println("3333");
         return maps;
+    }
+    @RequestMapping("uploadfile")
+    public void upload(){
+        
     }
 }
