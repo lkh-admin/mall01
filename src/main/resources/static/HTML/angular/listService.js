@@ -1,6 +1,6 @@
 app.service("listService",function($http){
     this.selectAll=function () {
-            return $http.get('user');
+            return $http.get('file/showAll');
     }
 
     this.selectOne=function (id) {
@@ -15,7 +15,7 @@ app.service("listService",function($http){
     }
     
     this.dele=function (id) {
-        return $http.get('delete?id='+id);
+        return $http.post('file/delete?id='+id);
     }
 
 });

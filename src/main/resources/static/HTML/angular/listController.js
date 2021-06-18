@@ -1,8 +1,8 @@
-app.controller('listController',function($scope,$controller,listService){
+app.controller('listController',function($scope,$controller,listService,$http){
 
     $controller('baseController',{$scope:$scope});
 
-
+    $scope.bigImgSrc='';
     //查询品牌列表
     $scope.selectAll=function(){
         listService.selectAll().success(
@@ -12,7 +12,22 @@ app.controller('listController',function($scope,$controller,listService){
         );
     }
 
-
+    $scope.uploadFile = function(){
+        var form = new FormData();
+        var file = document.getElementById("fileUpload").files[0];
+        form.append('aaa', file);
+        $http({
+            method: 'POST',
+            url: '/file/upload',
+            data: form,
+            headers: {'Content-Type': undefined},
+            transformRequest: angular.identity
+        }).success(function (data) {
+            alert('upload success');
+        }).error(function (data) {
+            alert('upload fail');
+        })
+    }
 
 
     //新增&修改保存
@@ -76,7 +91,12 @@ app.controller('listController',function($scope,$controller,listService){
        
     	}
     }
-    
+    $scope.showBigImg=function (ev) {
+        // layer.alert(ev.target.src)\
+        console.log(ev)
+        $scope.bigImgSrc=ev.path+'/'+ev.newFileName;
+    }
+
 
 
 
