@@ -80,6 +80,7 @@ app.controller('listController',function($scope,$controller,listService,$http){
         listService.dele($scope.selectIds).success(
             function(response){
                 if(response){
+                    $scope.selectIds=[];
                     listService.selectAll().success(
                         function(response){
                             $scope.list=response;

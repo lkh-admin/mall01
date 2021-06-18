@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VIEW</title>
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="HTML/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="HTML/plugins/adminLTE/css/AdminLTE.css">
+    <link rel="stylesheet" href="HTML/plugins/adminLTE/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="HTML/css/style.css">
+    <script src="HTML/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="HTML/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="HTML/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="HTML/plugins/angularjs/pagination.css">
+    <script src="HTML/plugins/angularjs/pagination.js"></script>
+    <script src="HTML/angular/base.js"></script>
+    <script type="text/javascript" src="HTML/angular/listService.js"></script>
+    <script type="text/javascript" src="HTML/angular/baseController.js"></script>
+    <script type="text/javascript" src="HTML/angular/listController.js"></script>
+
+
+</head >
+<body class="hold-transition skin-red sidebar-mini" ng-app="baseApp" ng-controller="listController" ng-init="selectAll()" >
+<!-- .box-body -->
+<div class="box-header with-border">
+    <h3 class="box-title">VIEW</h3>
+</div>
+
+<div class="box-body">
+
+    <!-- 数据表格 -->
+    <div class="table-box" >
+<!--            <tr ng-repeat="li in list">-->
+<!--                1-->
+
+<!--        style="width: 500px;height: 300px;"-->
+                    <img class="img-responsive img-thumbnail" style="width: 500px;height: 300px;" class="img-responsive" ng-repeat="li in list"  ng-src="{{li.path}}/{{li.newFileName}}" alt="" data-toggle="modal" data-target="#bigImg" ng-click="showBigImg(li)">
+
+
+<!--            </tr>-->
+        <!--数据列表/-->
+    </div>
+    <!-- 数据表格 /-->
+</div>
+<!-- /.box-body -->
+
+<div class="modal fade" id="bigImg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true" ng-click="bigImgSrc=''">关闭</button>
+
+        <img class="img-responsive"  ng-src="{{bigImgSrc}}" alt="" data-toggle="modal" data-target="#bigImg" >
+
+    </div>
+</div>
+
+</body>
+</html>
