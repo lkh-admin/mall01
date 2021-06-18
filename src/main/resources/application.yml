@@ -10,7 +10,7 @@ spring:
       max-request-size: 10MB
 
 server:
-  port: 8090
+  port: 8080
 uploadPath: /mall_files/
 mybatis:
   # type-aliases扫描路径
