@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: lvkaihe
-    url: jdbc:mysql://116.62.153.32:3306/mall
+    url: jdbc:mysql://116.62.153.32:3306/mall?useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
   servlet:
     multipart:
